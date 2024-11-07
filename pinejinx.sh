@@ -52,7 +52,7 @@ removealias() {
 install() {
 	printf "Downloading $version...\n"
 	curl -L "https://github.com/ryujinx-mirror/ryujinx/releases/download/r.49574a9/ryujinx-r.49574a9-linux_arm64.tar.gz" > ryujinx-r.49574a9-linux_arm64.tar.gz
-	tar -xf ryujinx-r.49574a9-linux_arm64.tar.gz
+	tar -xf ryujinx--linux_x64.tar.gz
 	arch_dir=$(tar --exclude='*/*' -tf ryujinx-r.49574a9-linux_arm64.tar.gz)
 	if [ -d "$arch_dir" ]; then
 		printf "Extraction successful!\n"
