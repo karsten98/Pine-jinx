@@ -51,9 +51,9 @@ removealias() {
 }
 install() {
 	printf "Downloading $version...\n"
-	curl -L "https://github.com/Ryujinx/release-channel-master/releases/download/${version}/ryujinx-${version}-linux_x64.tar.gz" > ryujinx-${version}-linux_x64.tar.gz
-	tar -xf ryujinx-${version}-linux_x64.tar.gz
-	arch_dir=$(tar --exclude='*/*' -tf ryujinx-${version}-linux_x64.tar.gz)
+	curl -L "https://github.com/ryujinx-mirror/ryujinx/releases/download/r.49574a9/ryujinx-r.49574a9-linux_arm64.tar.gz" > ryujinx-${version}-linux_x64.tar.gz
+	tar -xf ryujinx-r.49574a9-linux_arm64.tar.gz
+	arch_dir=$(tar --exclude='*/*' -tf ryujinx-r.49574a9-linux_arm64.tar.gz)
 	if [ -d "$arch_dir" ]; then
 		printf "Extraction successful!\n"
 		mkdir -p /home/${USER}/.local/share/Ryujinx
